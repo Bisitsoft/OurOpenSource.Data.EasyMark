@@ -20,6 +20,9 @@ namespace OurOpenSource.Data.EasyMark
 		Bitmap = 2
 	}
 	
+	/// <remarks>
+	/// 只需提供空的构造函数，对于目前的模式不建议在无参数构造函数中消耗大量资源，因为它要被用于注册。
+	/// </remarks>
 	public interface IEasyMark
 	{
 		/// <summary>

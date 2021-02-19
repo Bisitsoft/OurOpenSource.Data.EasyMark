@@ -8,6 +8,8 @@ An easy mark format.
 
 ## 概述
 
+主要命名空间为`OurOpenSource.Data.EasyMark`。
+
 其标准格式是`[ name( arg) ]`。
 **注意：括号内侧各有一个空格，`name`和`arg`之间有且仅有一个空格或者没有`arg`，`arg`首位允许包含空格，而`name`不可以。**
 **注意：`name`仅能由字母、数字和`_`构成。**
@@ -18,7 +20,16 @@ An easy mark format.
 
 通过`[[`和`]]`来转义。
 
-## 自带标记
+## 标记类型
+
+### comment
+
+`[ remark <...> ]`
+
+注释。
+
+例：`[ comment 我是注释 ]`
+
 
 ### img
 
@@ -29,14 +40,6 @@ An easy mark format.
 `path`：图片的文件地址。
 
 例：`[ img picture.png ]`
-
-### comment
-
-`[ remark <...> ]`
-
-注释。
-
-例：`[ comment 我是注释 ]`
 
 ### object
 
