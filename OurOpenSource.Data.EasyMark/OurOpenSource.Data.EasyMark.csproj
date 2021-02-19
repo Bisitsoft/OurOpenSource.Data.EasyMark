@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OurOpenSource.Data.EasyMark</RootNamespace>
+    <AssemblyName>OurOpenSource.Data.EasyMark</AssemblyName>
+    <PackageReleaseNotes>Official website: https://www.ourorangenet.com .</PackageReleaseNotes>
+    <Description>Official website: https://www.ourorangenet.com .</Description>
+    <PackageProjectUrl>https://www.ourorangenet.com</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.1" />
+    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
