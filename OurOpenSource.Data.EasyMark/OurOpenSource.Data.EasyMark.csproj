@@ -7,6 +7,7 @@
     <PackageReleaseNotes>Official website: https://www.ourorangenet.com .</PackageReleaseNotes>
     <Description>Official website: https://www.ourorangenet.com .</Description>
     <PackageProjectUrl>https://www.ourorangenet.com</PackageProjectUrl>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
