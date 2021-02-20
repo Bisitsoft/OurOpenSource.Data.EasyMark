@@ -8,17 +8,26 @@ An easy mark format.
 
 ## 概述
 
-主要命名空间为`OurOpenSource.Data.EasyMark`。
-
-其标准格式是`[ name( arg) ]`。
-**注意：括号内侧各有一个空格，`name`和`arg`之间有且仅有一个空格或者没有`arg`，`arg`首位允许包含空格，而`name`不可以。**
-**注意：`name`仅能由字母、数字和`_`构成。**
+**主要命名空间为`OurOpenSource.Data.EasyMark`。**
 
 通过一对方括号来存储标记，标记内采用命令的格式来表达含义。
+
+其标准格式是`[ name( arg) ]`。
+**注意：括号内侧各有一个空格，`name`和`arg`之间有且仅有一个空格或者没有`arg`，`arg`首尾允许包含空格，而`name`不可以。**
+**注意：`name`仅能由字母、数字和`_`构成。**
 
 如`text[ img path ]`意思是在text后插入一个存储在`path`的图片。
 
 通过`[[`和`]]`来转义。
+
+## 快速开始
+
+```
+using OurOpenSource.Data.EasyMark;
+
+
+ doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
+```
 
 ## 标记类型
 
@@ -30,6 +39,15 @@ An easy mark format.
 
 例：`[ comment 我是注释 ]`
 
+### data *（未实现）*
+
+`[ data <data> ]`
+
+保存数据。
+
+`data`：含转义字符的数据。
+
+例：`[ data Data\x64\u9999 ]`
 
 ### img
 
@@ -50,13 +68,3 @@ An easy mark format.
 `mark`：未实现的标记。**注意：开头不要有空格**
 
 例：`[ object emoji =w= ]`
-
-### data *（未实现）*
-
-`[ data <data> ]`
-
-保存数据。
-
-`data`：含转义字符的数据。
-
-例：`[ data Data\x64\u9999 ]`
