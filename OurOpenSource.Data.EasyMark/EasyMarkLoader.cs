@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace OurOpenSource.Data.EasyMark
 {
-	public class EasyMark
+	public static class EasyMarkLoader
 	{
 		public static string Escape(string origin){
 			int i;
