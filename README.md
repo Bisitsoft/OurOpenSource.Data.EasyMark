@@ -23,10 +23,14 @@ An easy mark format.
 ## 快速开始
 
 ```
+//引用库。
 using OurOpenSource.Data.EasyMark;
-
-
- doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
+//...
+//初始化`EasyMarksManager`。
+OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization();
+//将处理过后的EasyMark原文本存放到`doc`中。
+doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
+//...
 ```
 
 ## 标记类型
@@ -58,6 +62,8 @@ using OurOpenSource.Data.EasyMark;
 `path`：图片的文件地址。
 
 例：`[ img picture.png ]`
+
+**因为目前整段`arg`有用于表达`path`所以不要加`""`来包括`path`！**
 
 ### object
 

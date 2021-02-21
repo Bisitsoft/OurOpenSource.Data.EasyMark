@@ -344,3 +344,4 @@ healthchecksdb
 #ADD
 CheckList.txt
 Test_Console/
+Test_WPF/

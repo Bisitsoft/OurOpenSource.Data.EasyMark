@@ -17,7 +17,7 @@ namespace OurOpenSource.Data.EasyMark.Marks
 		/// <summary>
 		/// 方法`Demark()`的返回值类型。
 		/// </summary>
-		public EasyMarkReturnType ReturnType { get { return EasyMarkReturnType.Void; } }
+		public EasyMarkReturnType ReturnType { get { return EasyMarkReturnType.Bitmap; } }
 
 		/// <summary>
 		/// 解析标记。

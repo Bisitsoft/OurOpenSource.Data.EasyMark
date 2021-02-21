@@ -27,11 +27,15 @@ namespace OurOpenSource.Data.EasyMark.WPF
         {
             InitializeComponent();
         }
+        private void control_Loaded(object sender, RoutedEventArgs e)
+        {
+            ;
+        }
 
         /// <remarks>
         /// 文本中请不要包含`\r\n`或者只有`\r`，请替换为`\n`。
         /// </remarks>
-        private void Render(MarkedEasyMark markedEasyMark)
+        public void Render(MarkedEasyMark markedEasyMark)
         {
             int i, nowIndex = 0;
 
@@ -123,7 +127,8 @@ namespace OurOpenSource.Data.EasyMark.WPF
             image.EndInit();
             return new System.Windows.Controls.Image()
             {
-                Source = image
+                Source = image,
+                Stretch = Stretch.None
             };
         }
     }
