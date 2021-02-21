@@ -103,4 +103,4 @@ easyMarkRenderer.Render(doc);
 
 ## 其他
 
-`UDL_EasyMark`是用于Notepad++的用户自定义语言文件。
+`NPP_UDL_EasyMark.xml`是用于Notepad++的用户自定义语言文件。

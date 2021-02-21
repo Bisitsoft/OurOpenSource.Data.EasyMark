@@ -10,15 +10,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		LICENSE = LICENSE
+		NPP_UDL_EasyMark.xml = NPP_UDL_EasyMark.xml
 		README.md = README.md
-		UDL_EasyMark = UDL_EasyMark
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Console", "Test_Console\Test_Console.csproj", "{13A74995-2338-425E-8026-454919C18745}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OurOpenSource.Data.EasyMark.WPF", "OurOpenSource.Data.EasyMark.WPF\OurOpenSource.Data.EasyMark.WPF.csproj", "{DDB9C978-CB96-4BEC-8780-0D94EBD42807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_WPF", "Test_WPF\Test_WPF.csproj", "{933E0A8B-63DB-4493-B437-89770D7F1A1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_WPF", "Test_WPF\Test_WPF.csproj", "{933E0A8B-63DB-4493-B437-89770D7F1A1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
