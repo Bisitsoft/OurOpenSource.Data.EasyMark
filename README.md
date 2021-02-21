@@ -100,3 +100,7 @@ easyMarkRenderer.Render(doc);
 `mark`：未实现的标记。**注意：开头不要有空格**
 
 例：`[ obj emoji =w= ]`
+
+## 其他
+
+`UDL_EasyMark`是用于Notepad++的用户自定义语言文件。

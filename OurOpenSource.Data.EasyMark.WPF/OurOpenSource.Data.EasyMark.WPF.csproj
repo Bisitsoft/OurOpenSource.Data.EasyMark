@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <Nullable>disable</Nullable>
+    <Description>Official website: https://www.ourorangenet.com .</Description>
+    <PackageReleaseNotes>Official website: https://www.ourorangenet.com .</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/Orange23333/OurOpenSource.Data.EasyMark</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

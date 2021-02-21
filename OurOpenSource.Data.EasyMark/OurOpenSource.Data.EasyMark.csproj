@@ -6,8 +6,8 @@
     <AssemblyName>OurOpenSource.Data.EasyMark</AssemblyName>
     <PackageReleaseNotes>Official website: https://www.ourorangenet.com .</PackageReleaseNotes>
     <Description>Official website: https://www.ourorangenet.com .</Description>
-    <PackageProjectUrl>https://www.ourorangenet.com</PackageProjectUrl>
-    <Version>1.2.0</Version>
+    <PackageProjectUrl>https://github.com/Orange23333/OurOpenSource.Data.EasyMark</PackageProjectUrl>
+    <Version>1.3.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
