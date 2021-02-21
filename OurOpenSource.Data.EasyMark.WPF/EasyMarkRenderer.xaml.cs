@@ -27,10 +27,6 @@ namespace OurOpenSource.Data.EasyMark.WPF
         {
             InitializeComponent();
         }
-        private void control_Loaded(object sender, RoutedEventArgs e)
-        {
-            ;
-        }
 
         /// <remarks>
         /// 文本中请不要包含`\r\n`或者只有`\r`，请替换为`\n`。
@@ -97,7 +93,7 @@ namespace OurOpenSource.Data.EasyMark.WPF
                 EasyMarkContent content = markedEasyMark[i];
                 AddObject(EasyMarksManager.Marks[content.Name], content.Arg);
 
-                nowIndex += markedEasyMark.MarksPosition[i] + markedEasyMark.MarksLength[i];
+                nowIndex = markedEasyMark.MarksPosition[i] + markedEasyMark.MarksLength[i];
             }
             AutoReturn(markedEasyMark.Text.Substring(nowIndex));
             if (lastLine.Length > 0)

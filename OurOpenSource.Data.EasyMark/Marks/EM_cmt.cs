@@ -4,12 +4,12 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Marks
 {
-    public class EM_object : IEasyMark
+    public class EM_cmt : IEasyMark
     {
 		/// <summary>
 		/// 标记的类型的名称。
 		/// </summary>
-		public string Name { get { return "object"; } }
+		public string Name { get { return "cmt"; } }
 
 		/// <summary>
 		/// 方法`Demark()`的返回值类型。
@@ -22,13 +22,8 @@ namespace OurOpenSource.Data.EasyMark.Marks
 		/// <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
 		/// <returns>执行结果。如果没有则为`null`。</returns>
 		public object Demark(string arg)
-        {
+		{
 			return null;
-        }
-
-		public static EasyMarkContent ToMark(string arg)
-        {
-			return new EasyMarkContent("[ " + arg + " ]");
-        }
+		}
 	}
 }

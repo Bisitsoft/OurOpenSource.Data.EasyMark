@@ -21,9 +21,9 @@ namespace OurOpenSource.Data.EasyMark.Marks
 
         public static void Initialization()
         {
-            Register(new EM_comment());
+            Register(new EM_cmt());
             Register(new EM_img());
-            Register(new EM_object());
+            Register(new EM_obj());
         }
     }
 }

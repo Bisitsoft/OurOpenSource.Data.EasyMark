@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OurOpenSource.Data.EasyMark.WPF"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Loaded="control_Loaded">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <RichTextBox x:Name="richTextBox" IsReadOnly="True">
             <FlowDocument LineHeight="1" >

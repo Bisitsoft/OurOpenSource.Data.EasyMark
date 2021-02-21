@@ -20,16 +20,42 @@ An easy mark format.
 
 通过`[[`和`]]`来转义。
 
-## 快速开始
+## 教程
+
+### 快速开始
 
 ```
 //引用库。
+using System; //Console在其中
 using OurOpenSource.Data.EasyMark;
 //...
 //初始化`EasyMarksManager`。
 OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization();
 //将处理过后的EasyMark原文本存放到`doc`中。
-doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
+MarkedEasyMark doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
+//输出转义过后的EasyMark文本。
+Console.WriteLine(doc.Text);
+//...
+```
+
+### 加载EasyMark文件（UI库）
+
+```
+//引用库。
+using OurOpenSource.Data.EasyMark;
+using OurOpenSource.Data.EasyMark.WPF;
+//...
+//初始化`EasyMarksManager`。
+OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization();
+//将处理过后的EasyMark原文本存放到`doc`中。
+MarkedEasyMark doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
+//创建一个`EasyMarkRenderer`
+EasyMarkRenderer easyMarkRenderer = new EasyMarkRenderer();
+//架设窗口中有一个名为`grid`的`Grid`。
+//添加`easyMarkRenderer`到grid中。
+grid.Children.Add(easyMarkRenderer);
+//渲染EasyMark文档。
+easyMarkRenderer.Render(doc);
 //...
 ```
 
@@ -37,23 +63,23 @@ doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
 
 ### comment
 
-`[ remark <...> ]`
+`[ cmt <...> ]`
 
 注释。
 
-例：`[ comment 我是注释 ]`
+例：`[ cmt 我是注释 ]`
 
 ### data *（未实现）*
 
-`[ data <data> ]`
+`[ dat <data> ]`
 
 保存数据。
 
 `data`：可以含有转义字符的字符串。
 
-例：`[ data Data\x64\u9999 ]`
+例：`[ dat Data\x64\u9999 ]`
 
-### img
+### image
 
 `[ img <path> ]`
 
@@ -67,10 +93,10 @@ doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
 
 ### object
 
-`[ object <mark> ]`
+`[ obj <mark> ]`
 
 保留对象字段，对于未实现的内容进行保留。
 
 `mark`：未实现的标记。**注意：开头不要有空格**
 
-例：`[ object emoji =w= ]`
+例：`[ obj emoji =w= ]`
