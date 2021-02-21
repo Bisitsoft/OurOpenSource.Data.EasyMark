@@ -7,10 +7,12 @@ namespace OurOpenSource.Data.EasyMark.Marks
 {
     public class EM_img : IEasyMark
     {
+		private string src;
+
 		/// <summary>
 		/// 标记的类型的名称。
 		/// </summary>
-		public string Name { get { return "comment"; } }
+		public string Name { get { return "img"; } }
 
 		/// <summary>
 		/// 方法`Demark()`的返回值类型。

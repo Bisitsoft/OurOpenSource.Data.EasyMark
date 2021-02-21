@@ -1,0 +1,24 @@
+﻿<UserControl x:Name="control" x:Class="OurOpenSource.Data.EasyMark.WPF.EasyMarkRenderer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OurOpenSource.Data.EasyMark.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="control_Loaded">
+    <Grid>
+        <RichTextBox x:Name="richTextBox" IsReadOnly="True">
+            <FlowDocument LineHeight="1" >
+                <!-- <Paragraph KeepWithNext="True" KeepTogether="True">
+                    <Run Text="RichTextBosadasdadsadsadasdsdadsadadasdasdsadasdasdasdasdsadsadsdx" />
+                    <Run Text="dsfds" />
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+
+                    <Image Source="D:/Work/Project/Software/#Texture/Icon/OrangeStudio.png" />
+                </Paragraph> -->
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</UserControl>

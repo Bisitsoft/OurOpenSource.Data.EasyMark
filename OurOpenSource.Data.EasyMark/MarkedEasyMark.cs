@@ -13,11 +13,11 @@ namespace OurOpenSource.Data.EasyMark
         public List<int> MarksLength { get; set; }
         public string Text { get; set; }
 
-        public MarkContent this[int index]
+        public EasyMarkContent this[int index]
         {
             get
             {
-                return new MarkContent(Text.Substring(MarksPosition[index], MarksLength[index]));
+                return new EasyMarkContent(Text.Substring(MarksPosition[index], MarksLength[index]));
             }
         }
 

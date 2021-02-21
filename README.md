@@ -45,7 +45,7 @@ using OurOpenSource.Data.EasyMark;
 
 保存数据。
 
-`data`：含转义字符的数据。
+`data`：可以含有转义字符的字符串。
 
 例：`[ data Data\x64\u9999 ]`
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -47,6 +48,12 @@ namespace OurOpenSource.Data.EasyMark
 		//	return sb.ToString();
 		//}
 
+		public static MarkedEasyMark LoadFromFile(string path)
+		{
+			//FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, FileOptions.SequentialScan);
+			return ProcessEasyMark(File.ReadAllText(path));
+		}
+
 		/// <summary>
 		/// 处理EasyMark的原文本。
 		/// </summary>
@@ -54,9 +61,12 @@ namespace OurOpenSource.Data.EasyMark
 		/// <returns>处理后的EasyMark。</returns>
 		/// <remarks>
 		/// 通过寻找单数的连续的`'['`的尾部，来寻找一个标记的起始。
+		/// 会自动把文本中的`\r\n`替换为`\n`。
 		/// </remarks>
 		public static MarkedEasyMark ProcessEasyMark(string originText)
         {
+			originText = originText.Replace("\r\n", "\n");
+
 			int i, moveTemp, realIndex, markPosition;
 			int move = 0; //long move = 0;
 			//int matchMarks = 0;

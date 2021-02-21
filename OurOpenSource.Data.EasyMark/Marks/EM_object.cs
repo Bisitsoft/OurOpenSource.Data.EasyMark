@@ -26,9 +26,9 @@ namespace OurOpenSource.Data.EasyMark.Marks
 			return null;
         }
 
-		public static MarkContent ToMark(string arg)
+		public static EasyMarkContent ToMark(string arg)
         {
-			return new MarkContent("[ " + arg + " ]");
+			return new EasyMarkContent("[ " + arg + " ]");
         }
 	}
 }

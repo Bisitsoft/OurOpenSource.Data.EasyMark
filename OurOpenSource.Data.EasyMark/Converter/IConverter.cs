@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OurOpenSource.Data.EasyMark.Converter
+{
+    public interface IConverter
+    {
+		/// <summary>
+		/// 标记的类型的名称。
+		/// </summary>
+		string Name { get; }
+
+		///// <summary>
+		///// 转化字符串为EasyMark。
+		///// </summary>
+		///// <param name="str">一段字符串。</param>
+		///// <returns>转化后得到的EasyMark。</returns>
+		//EasyMarkContent Convert(string str);
+
+		/// <summary>
+		/// 转化EasyMark为字符串。
+		/// </summary>
+		/// <param name="content">EasyMark内容。</param>
+		/// <returns>转化后得到的字符串。</returns>
+		string Convert(EasyMarkContent content);
+	}
+}

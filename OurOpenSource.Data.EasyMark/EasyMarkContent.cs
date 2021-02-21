@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace OurOpenSource.Data.EasyMark
 {
-    public class MarkContent
+    public class EasyMarkContent
     {
         private string name;
         public string Name
@@ -60,12 +60,12 @@ namespace OurOpenSource.Data.EasyMark
         /// <remarks>
         /// 如果`arg`为`null`会自动被替换为`""`。
         /// </remarks>
-        public MarkContent(string name, string arg = "")
+        public EasyMarkContent(string name, string arg = "")
         {
             this.Name = name;
             this.Arg = arg;
         }
-        public MarkContent(string fullMark)
+        public EasyMarkContent(string fullMark)
         {
             if(!Regex.Match(fullMark,"^\\[ .* \\]$").Success)
             {

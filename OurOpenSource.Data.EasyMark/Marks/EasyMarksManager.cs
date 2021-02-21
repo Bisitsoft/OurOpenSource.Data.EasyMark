@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-using OurOpenSource.Data.EasyMark.Marks;
-
-namespace OurOpenSource.Data.EasyMark
+namespace OurOpenSource.Data.EasyMark.Marks
 {
     public static class EasyMarksManager
     {
