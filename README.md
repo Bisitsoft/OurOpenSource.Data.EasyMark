@@ -2,9 +2,13 @@
 
 An easy mark format.
 
+[Link to OurOpenSource Main Git](https://github.com/Orange23333/OurOpenSource)
+
 跟名字一样是一个简易的标记方式，暂时不要指望有多太多的功能。
 
 暂时不输出格式错误位置。
+
+可以从Nuget下载包`OurOpenSource.Data.EasyMark`或`OurOpenSource.Data.EasyMark.WPF`。
 
 ## 概述
 
@@ -51,7 +55,7 @@ OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization();
 MarkedEasyMark doc = EasyMarkLoader.ProcessEasyMark("EasyMark Document Text");
 //创建一个`EasyMarkRenderer`
 EasyMarkRenderer easyMarkRenderer = new EasyMarkRenderer();
-//架设窗口中有一个名为`grid`的`Grid`。
+//假设窗口中有一个名为`grid`的`Grid`。
 //添加`easyMarkRenderer`到grid中。
 grid.Children.Add(easyMarkRenderer);
 //渲染EasyMark文档。

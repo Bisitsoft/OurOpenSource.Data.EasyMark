@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -13,16 +12,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Microsoft.Win32;
+
 namespace OurOpenSource.Data.EasyMark.WPF
 {
     /// <summary>
-    /// EasyMakerViewer.xaml 的交互逻辑
+    /// EasyMarkViewer.xaml 的交互逻辑
     /// </summary>
-    public partial class EasyMakerViewer : UserControl
+    public partial class EasyMarkViewer : UserControl
     {
         private static readonly string text_FileNotOpened = "File not opened.";
 
-        public EasyMakerViewer()
+        public EasyMarkViewer()
         {
             InitializeComponent();
         }
