@@ -21,6 +21,7 @@ Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</P
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>D:\Work\Project\OurOpenSource\source\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.WPF\OurOpenSource.Data.EasyMark.WPF.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

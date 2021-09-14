@@ -29,10 +29,33 @@ namespace OurOpenSource.Data.EasyMark.WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // richTextBox
+            // 
+            this.richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.ReadOnly = true;
+            this.richTextBox.Size = new System.Drawing.Size(150, 150);
+            this.richTextBox.TabIndex = 0;
+            this.richTextBox.Text = "";
+            // 
+            // EasyMarkRenderer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.richTextBox);
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Name = "EasyMarkRenderer";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox richTextBox;
     }
 }

@@ -17,6 +17,10 @@ Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</P
     <Version>1.0.0.0</Version>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Work\Project\OurOpenSource\source\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.WinForms\OurOpenSource.Data.EasyMark.WinForms.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.csproj" />
   </ItemGroup>
