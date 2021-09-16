@@ -14,14 +14,19 @@
     <PackageReleaseNotes>More info view: https://github.com/Orange23333/OurOpenSource.Data.EasyMark .
 Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</PackageReleaseNotes>
     <PackageTags>easymark winforms</PackageTags>
-    <Version>1.0.0.0</Version>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>D:\Work\Project\OurOpenSource\source\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.WinForms\OurOpenSource.Data.EasyMark.WinForms.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
+    <ProjectReference Include="..\OurOpenSource.Data.EasyMark.WPF\OurOpenSource.Data.EasyMark.WPF.csproj" />
     <ProjectReference Include="..\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.csproj" />
   </ItemGroup>
 
@@ -30,6 +35,12 @@ Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</P
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WindowsFormsIntegration">
+      <HintPath>C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\3.1.0\ref\netcoreapp3.1\WindowsFormsIntegration.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

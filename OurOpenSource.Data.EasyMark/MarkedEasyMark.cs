@@ -4,15 +4,35 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark
 {
+    /// <summary>
+    /// 用于存储已处理过（标记过标记位置）的EasyMark文本。
+    /// </summary>
+    /// <remarks>
+    /// 因为只是用于存储，所以各个值之间不想关。
+    /// </remarks>
     public class MarkedEasyMark
     {
+        /// <summary>
+        /// 各个标记的位置。
+        /// </summary>
         public List<int> MarksPosition { get; set; }
+        /// <summary>
+        /// 各个标记的长度。
+        /// </summary>
         /// <remarks>
-        /// 包含一堆括号的长度。
+        /// 长度包含一对方括号。
         /// </remarks>
         public List<int> MarksLength { get; set; }
+        /// <summary>
+        /// EasyMark文本。
+        /// </summary>
         public string Text { get; set; }
 
+        /// <summary>
+        /// 标记。
+        /// </summary>
+        /// <param name="index">标记的索引。</param>
+        /// <returns>标记内容。</returns>
         public EasyMarkContent this[int index]
         {
             get
@@ -83,6 +103,12 @@ namespace OurOpenSource.Data.EasyMark
 			return document.ToString();
 		}
 
+        /// <summary>
+        /// 构造MarkedEasyMark。
+        /// </summary>
+        /// <param name="marksPosition">各个标记的位置。</param>
+        /// <param name="marksLength">各个标记的长度。</param>
+        /// <param name="text">EasyMark文本。</param>
         public MarkedEasyMark(List<int> marksPosition, List<int> marksLength, string text)
         {
             this.MarksPosition = marksPosition;

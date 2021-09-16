@@ -4,6 +4,9 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Marks
 {
+	/// <summary>
+	/// 注释标记。
+	/// </summary>
     public class EM_cmt : IEasyMark
     {
 		/// <summary>

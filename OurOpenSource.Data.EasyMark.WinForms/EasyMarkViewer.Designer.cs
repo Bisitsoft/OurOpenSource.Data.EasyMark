@@ -1,7 +1,7 @@
 ﻿
 namespace OurOpenSource.Data.EasyMark.WinForms
 {
-    partial class EasyMarkRenderer
+    partial class EasyMarkViewer
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -29,16 +29,8 @@ namespace OurOpenSource.Data.EasyMark.WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // EasyMarkRenderer
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "EasyMarkRenderer";
-            this.ResumeLayout(false);
-
         }
 
         #endregion

@@ -6,9 +6,18 @@ using System.Text.RegularExpressions;
 
 namespace OurOpenSource.Data.EasyMark
 {
+    /// <summary>
+    /// 一个EasyMark的内容。
+    /// </summary>
     public class EasyMarkContent
     {
+        /// <summary>
+        /// EasyMark的标记类型名称。
+        /// </summary>
         private string name;
+        /// <summary>
+        /// EasyMark的标记类型名称。
+        /// </summary>
         public string Name
         {
             get { return name; }
@@ -22,7 +31,13 @@ namespace OurOpenSource.Data.EasyMark
             }
         }
 
+        /// <summary>
+        /// 参数部分的内容。
+        /// </summary>
         private string arg;
+        /// <summary>
+        /// 参数部分的内容。
+        /// </summary>
         public string Arg
         {
             get { return arg; }
@@ -32,7 +47,12 @@ namespace OurOpenSource.Data.EasyMark
             }
         }
 
-        /// <returns>返回形如`name arg`或`name`的字符串。</returns>
+        /// <summary>
+        /// 输出EasyMark的内容。
+        /// </summary>
+        /// <returns>
+        /// 返回形如`name arg`或`name`的字符串。
+        /// </returns>
         public override string ToString()
         {
             if(Arg == "")
@@ -44,7 +64,12 @@ namespace OurOpenSource.Data.EasyMark
                 return Name + " " + Arg;
             }
         }
-        /// <returns>返回形如`[ name arg ]`或`[ name ]`的字符串。</returns>
+        /// <summary>
+        /// 返回整个EasyMArk。
+        /// </summary>
+        /// <returns>
+        /// 返回形如`[ name arg ]`或`[ name ]`的字符串。
+        /// </returns>
         public string ToFullyString()
         {
             if (Arg == "")
@@ -57,6 +82,15 @@ namespace OurOpenSource.Data.EasyMark
             }
         }
 
+        /// <summary>
+        /// 构造标记内容。
+        /// </summary>
+        /// <param name="name">
+        /// 标记的类型名称。
+        /// </param>
+        /// <param name="arg">
+        /// 标记的参数部分。
+        /// </param>
         /// <remarks>
         /// 如果`arg`为`null`会自动被替换为`""`。
         /// </remarks>
@@ -65,6 +99,10 @@ namespace OurOpenSource.Data.EasyMark
             this.Name = name;
             this.Arg = arg;
         }
+        /// <summary>
+        /// 构造标记内容。
+        /// </summary>
+        /// <param name="fullMark">完整的标记文本。</param>
         public EasyMarkContent(string fullMark)
         {
             if(!Regex.Match(fullMark,"^\\[ .* \\]$").Success)

@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OurOpenSource.Data.EasyMark</name>
+    </assembly>
+    <members>
+        <member name="T:OurOpenSource.Data.EasyMark.EasyMarkContent">
+            <summary>
+            一个EasyMark的内容。
+            </summary>
+        </member>
+        <member name="F:OurOpenSource.Data.EasyMark.EasyMarkContent.name">
+            <summary>
+            EasyMark的标记类型名称。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.EasyMarkContent.Name">
+            <summary>
+            EasyMark的标记类型名称。
+            </summary>
+        </member>
+        <member name="F:OurOpenSource.Data.EasyMark.EasyMarkContent.arg">
+            <summary>
+            参数部分的内容。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.EasyMarkContent.Arg">
+            <summary>
+            参数部分的内容。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkContent.ToString">
+            <summary>
+            输出EasyMark的内容。
+            </summary>
+            <returns>
+            返回形如`name arg`或`name`的字符串。
+            </returns>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkContent.ToFullyString">
+            <summary>
+            返回整个EasyMArk。
+            </summary>
+            <returns>
+            返回形如`[ name arg ]`或`[ name ]`的字符串。
+            </returns>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkContent.#ctor(System.String,System.String)">
+            <summary>
+            构造标记内容。
+            </summary>
+            <param name="name">
+            标记的类型名称。
+            </param>
+            <param name="arg">
+            标记的参数部分。
+            </param>
+            <remarks>
+            如果`arg`为`null`会自动被替换为`""`。
+            </remarks>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkContent.#ctor(System.String)">
+            <summary>
+            构造标记内容。
+            </summary>
+            <param name="fullMark">完整的标记文本。</param>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.EasyMarkDocument">
+            <summary>
+            EasyMark文档。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.EasyMarkDocument.MarkedEasyMark">
+            <summary>
+            标记过的EasyMark。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkDocument.LoadFromFile(System.String)">
+            <summary>
+            从文件件加载EasyMark文档。
+            </summary>
+            <param name="path">文档路径。</param>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkDocument.Load(OurOpenSource.Data.EasyMark.MarkedEasyMark)">
+            <summary>
+            直接从标记过的EasyMark加载文档。
+            </summary>
+            <param name="markedEasyMark">标记过的EasyMark。</param>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.EasyMarkLoader">
+            <summary>
+            EasyMark加载器。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkLoader.Escape(System.String)">
+            <summary>
+            将普通文本转义成EasyMark文本。
+            </summary>
+            <param name="origin">原文本。</param>
+            <returns>转以后的文本。</returns>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkLoader.LoadFromFile(System.String)">
+            <summary>
+            从文件加载EasyMark文档。
+            </summary>
+            <param name="path">文档路径。</param>
+            <returns>标记过的EasyMark文档。</returns>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkLoader.ProcessEasyMark(System.String)">
+            <summary>
+            处理EasyMark的原文本。
+            </summary>
+            <param name="originText">EasyMark的原文本。</param>
+            <returns>处理后的EasyMark。</returns>
+            <remarks>
+            通过寻找单数的连续的`'['`的尾部，来寻找一个标记的起始。
+            会自动把文本中的`\r\n`替换为`\n`。
+            </remarks>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.EasyMarkReturnType">
+            <summary>
+            EasyMark解码后返回的类型。
+            </summary>
+        </member>
+        <member name="F:OurOpenSource.Data.EasyMark.EasyMarkReturnType.Void">
+            <summary>
+            没有返回值。
+            </summary>
+        </member>
+        <member name="F:OurOpenSource.Data.EasyMark.EasyMarkReturnType.String">
+            <summary>
+            返回字符串。
+            </summary>
+        </member>
+        <member name="F:OurOpenSource.Data.EasyMark.EasyMarkReturnType.Bitmap">
+            <summary>
+            返回`System.Drawing.Bitmap`。
+            </summary>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.IEasyMark">
+            <summary>
+            EasyMark。
+            </summary>
+            <remarks>
+            只需提供空的构造函数，对于目前的模式不建议在无参数构造函数中消耗大量资源，因为它要被用于注册。
+            </remarks>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.IEasyMark.Name">
+            <summary>
+            标记的类型的名称。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.IEasyMark.ReturnType">
+            <summary>
+            方法`Demark()`的返回值类型。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.IEasyMark.Demark(System.String)">
+            <summary>
+            解析标记。
+            </summary>
+            <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
+            <returns>执行结果。如果没有则为`null`。</returns>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.MarkedEasyMark">
+            <summary>
+            用于存储已处理过（标记过标记位置）的EasyMark文本。
+            </summary>
+            <remarks>
+            因为只是用于存储，所以各个值之间不想关。
+            </remarks>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.MarkedEasyMark.MarksPosition">
+            <summary>
+            各个标记的位置。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.MarkedEasyMark.MarksLength">
+            <summary>
+            各个标记的长度。
+            </summary>
+            <remarks>
+            长度包含一对方括号。
+            </remarks>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.MarkedEasyMark.Text">
+            <summary>
+            EasyMark文本。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.MarkedEasyMark.Item(System.Int32)">
+            <summary>
+            标记。
+            </summary>
+            <param name="index">标记的索引。</param>
+            <returns>标记内容。</returns>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.MarkedEasyMark.Output">
+            <summary>
+            输出转义后的EasyMark文档。
+            </summary>
+            <returns>转义后的EasyMark文档。</returns>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.MarkedEasyMark.#ctor(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String)">
+            <summary>
+            构造MarkedEasyMark。
+            </summary>
+            <param name="marksPosition">各个标记的位置。</param>
+            <param name="marksLength">各个标记的长度。</param>
+            <param name="text">EasyMark文本。</param>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.Marks.EasyMarksManager">
+            <summary>
+            EasyMark类型管理器。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Marks">
+            <summary>
+            所有已注册EasyMark类型。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Register(OurOpenSource.Data.EasyMark.IEasyMark)">
+            <summary>
+            注册EasyMark类型。
+            </summary>
+            <param name="mark">EasyMark类型。</param>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Unregister(OurOpenSource.Data.EasyMark.IEasyMark)">
+            <summary>
+            注销EasyMark类型。
+            </summary>
+            <param name="mark">EasyMark类型。</param>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization">
+            <summary>
+            初始化本管理器。
+            </summary>
+            <remarks>
+            目前仅用于加载系统自带的EasyMark类型。
+            </remarks>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.Marks.EM_cmt">
+            <summary>
+            注释标记。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.Marks.EM_cmt.Name">
+            <summary>
+            标记的类型的名称。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.Marks.EM_cmt.ReturnType">
+            <summary>
+            方法`Demark()`的返回值类型。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_cmt.Demark(System.String)">
+            <summary>
+            解析标记。
+            </summary>
+            <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
+            <returns>执行结果。如果没有则为`null`。</returns>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.Marks.EM_img">
+            <summary>
+            图片标记。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.Marks.EM_img.Name">
+            <summary>
+            标记的类型的名称。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.Marks.EM_img.ReturnType">
+            <summary>
+            方法`Demark()`的返回值类型。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_img.Demark(System.String)">
+            <summary>
+            解析标记。
+            </summary>
+            <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
+            <returns>执行结果。如果没有则为`null`。</returns>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.Marks.EM_obj">
+            <summary>
+            对象标记。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.Marks.EM_obj.Name">
+            <summary>
+            标记的类型的名称。
+            </summary>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.Marks.EM_obj.ReturnType">
+            <summary>
+            方法`Demark()`的返回值类型。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_obj.Demark(System.String)">
+            <summary>
+            解析标记。
+            </summary>
+            <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
+            <returns>执行结果。如果没有则为`null`。</returns>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_obj.ToMark(System.String)">
+            <summary>
+            提取obj标记中存储的标记。
+            </summary>
+            <param name="arg">obj标志中的参数部分。</param>
+            <returns>obj标记中存储的标记。</returns>
+        </member>
+    </members>
+</doc>

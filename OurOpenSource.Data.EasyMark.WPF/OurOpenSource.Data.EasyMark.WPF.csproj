@@ -24,6 +24,10 @@ Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</P
     <DocumentationFile>D:\Work\Project\OurOpenSource\source\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.WPF\OurOpenSource.Data.EasyMark.WPF.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.csproj" />
   </ItemGroup>

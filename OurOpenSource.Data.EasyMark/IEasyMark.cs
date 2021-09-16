@@ -4,6 +4,9 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark
 {
+	/// <summary>
+	/// EasyMark解码后返回的类型。
+	/// </summary>
 	public enum EasyMarkReturnType
 	{
 		/// <summary>
@@ -20,6 +23,9 @@ namespace OurOpenSource.Data.EasyMark
 		Bitmap = 2
 	}
 	
+	/// <summary>
+	/// EasyMark。
+	/// </summary>
 	/// <remarks>
 	/// 只需提供空的构造函数，对于目前的模式不建议在无参数构造函数中消耗大量资源，因为它要被用于注册。
 	/// </remarks>

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Converter.HTML
 {
+	/// <summary>
+    /// 图片EasyMark转换器。
+    /// </summary>
     public class EMC_img : IConverter
     {
 		/// <summary>

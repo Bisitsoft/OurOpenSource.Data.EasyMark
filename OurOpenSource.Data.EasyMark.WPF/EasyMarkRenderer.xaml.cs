@@ -23,11 +23,18 @@ namespace OurOpenSource.Data.EasyMark.WPF
     /// </summary>
     public partial class EasyMarkRenderer : UserControl
     {
+        /// <summary>
+        /// 构造EasyMarkRenderer。
+        /// </summary>
         public EasyMarkRenderer()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 渲染EasyMark文档。
+        /// </summary>
+        /// <param name="markedEasyMark">标记过的EasyMark。</param>
         /// <remarks>
         /// 文本中请不要包含`\r\n`或者只有`\r`，请替换为`\n`。
         /// </remarks>

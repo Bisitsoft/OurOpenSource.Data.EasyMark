@@ -22,22 +22,15 @@ Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</P
     <DocumentationFile>D:\Work\Project\OurOpenSource\source\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark\OurOpenSource.Data.EasyMark.xml</DocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Converter\EasyMarkConverter.cs" />
-    <Compile Remove="Converter\HTML\EasyMarkConverter_HTML.cs" />
-    <Compile Remove="Converter\HTML\EMC_img.cs" />
-    <Compile Remove="Converter\IConverter.cs" />
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="Converter\EasyMarkConverter.cs" />
-    <None Include="Converter\HTML\EasyMarkConverter_HTML.cs" />
-    <None Include="Converter\HTML\EMC_img.cs" />
-    <None Include="Converter\IConverter.cs" />
   </ItemGroup>
 
   <ItemGroup>

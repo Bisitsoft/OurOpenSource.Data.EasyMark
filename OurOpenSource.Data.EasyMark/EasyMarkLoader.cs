@@ -7,8 +7,16 @@ using System.Text.RegularExpressions;
 
 namespace OurOpenSource.Data.EasyMark
 {
+	/// <summary>
+	/// EasyMark加载器。
+	/// </summary>
 	public static class EasyMarkLoader
 	{
+		/// <summary>
+		/// 将普通文本转义成EasyMark文本。
+		/// </summary>
+		/// <param name="origin">原文本。</param>
+		/// <returns>转以后的文本。</returns>
 		public static string Escape(string origin){
 			int i;
 			StringBuilder sb = new StringBuilder(origin);
@@ -48,6 +56,11 @@ namespace OurOpenSource.Data.EasyMark
 		//	return sb.ToString();
 		//}
 
+		/// <summary>
+		/// 从文件加载EasyMark文档。
+		/// </summary>
+		/// <param name="path">文档路径。</param>
+		/// <returns>标记过的EasyMark文档。</returns>
 		public static MarkedEasyMark LoadFromFile(string path)
 		{
 			//FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, FileOptions.SequentialScan);
@@ -57,7 +70,7 @@ namespace OurOpenSource.Data.EasyMark
 		/// <summary>
 		/// 处理EasyMark的原文本。
 		/// </summary>
-		/// <param name="easyMarkText">EasyMark的原文本。</param>
+		/// <param name="originText">EasyMark的原文本。</param>
 		/// <returns>处理后的EasyMark。</returns>
 		/// <remarks>
 		/// 通过寻找单数的连续的`'['`的尾部，来寻找一个标记的起始。

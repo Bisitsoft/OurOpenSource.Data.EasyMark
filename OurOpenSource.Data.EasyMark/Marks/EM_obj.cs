@@ -4,6 +4,9 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Marks
 {
+	/// <summary>
+	/// 对象标记。
+	/// </summary>
     public class EM_obj : IEasyMark
     {
 		/// <summary>
@@ -26,6 +29,11 @@ namespace OurOpenSource.Data.EasyMark.Marks
 			return null;
         }
 
+		/// <summary>
+		/// 提取obj标记中存储的标记。
+		/// </summary>
+		/// <param name="arg">obj标志中的参数部分。</param>
+		/// <returns>obj标记中存储的标记。</returns>
 		public static EasyMarkContent ToMark(string arg)
         {
 			return new EasyMarkContent("[ " + arg + " ]");

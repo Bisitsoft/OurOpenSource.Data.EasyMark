@@ -5,6 +5,9 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Marks
 {
+	/// <summary>
+	/// 图片标记。
+	/// </summary>
     public class EM_img : IEasyMark
     {
 		private string src;

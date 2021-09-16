@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OurOpenSource.Data.EasyMark.WPF</name>
+    </assembly>
+    <members>
+        <member name="T:OurOpenSource.Data.EasyMark.WPF.EasyMarkRenderer">
+            <summary>
+            EasyMarkRenderer.xaml 的交互逻辑
+            </summary>
+            <summary>
+            EasyMarkRenderer
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkRenderer.#ctor">
+            <summary>
+            构造EasyMarkRenderer。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkRenderer.Render(OurOpenSource.Data.EasyMark.MarkedEasyMark)">
+            <summary>
+            渲染EasyMark文档。
+            </summary>
+            <param name="markedEasyMark">标记过的EasyMark。</param>
+            <remarks>
+            文本中请不要包含`\r\n`或者只有`\r`，请替换为`\n`。
+            </remarks>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkRenderer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer">
+            <summary>
+            EasyMarkViewer.xaml 的交互逻辑
+            </summary>
+            <summary>
+            EasyMarkViewer
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer.#ctor">
+            <summary>
+            构造EasyMarkViewer。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer.RefreshPage">
+            <summary>
+            刷新页面。
+            </summary>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer.ShowError(System.String)">
+            <summary>
+            显示错误提示框。
+            </summary>
+            <param name="text">显示内容。</param>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer.ShowWarning(System.String)">
+            <summary>
+            显示警告提示框。
+            </summary>
+            <param name="text">显示内容。</param>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer.ShowInformation(System.String)">
+            <summary>
+            显示信息提示框。
+            </summary>
+            <param name="text">显示内容。</param>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer.ShowMessage(System.String,System.String,System.Windows.MessageBoxButton,System.Windows.MessageBoxImage)">
+            <summary>
+            显示提示框。
+            </summary>
+            <param name="text">显示内容。</param>
+            <param name="caption">标题。</param>
+            <param name="buttons">按钮。</param>
+            <param name="icon">图标。</param>
+        </member>
+        <member name="M:OurOpenSource.Data.EasyMark.WPF.EasyMarkViewer.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

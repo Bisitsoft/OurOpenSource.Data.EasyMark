@@ -4,6 +4,9 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Converter
 {
+	/// <summary>
+    /// EasyMark转换器。
+    /// </summary>
     public interface IConverter
     {
 		/// <summary>

@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OurOpenSource.Data.EasyMark.Converter.HTML
+{
+    /// <summary>
+    /// 将EasyMark转换为HTML格式的转化器们。
+    /// </summary>
+    public class EasyMarkConverters_ToHTML : EasyMarkConverter
+    {
+        /// <summary>
+        /// 构造EasyMarkConverters_ToHTML并加载自带转换器。
+        /// </summary>
+        public EasyMarkConverters_ToHTML() : base()
+        {
+            base.RegisterConverter(new EMC_img());
+        }
+    }
+}

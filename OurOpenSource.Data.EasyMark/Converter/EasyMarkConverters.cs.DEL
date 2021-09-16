@@ -4,15 +4,29 @@ using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Converter
 {
-    public abstract class EasyMarkConverter
+    /// <summary>
+    /// EasyMark转化器们。
+    /// </summary>
+    public abstract class EasyMarkConverters
     {
         private Dictionary<string, IConverter> converters = new Dictionary<string, IConverter>();
+        /// <summary>
+        /// 已注册的EasyMark转化器们。
+        /// </summary>
         public Dictionary<string, IConverter> Converters { get { return converters; } }
 
+        /// <summary>
+        /// 注册转换器。
+        /// </summary>
+        /// <param name="converter">转换器。</param>
         public void RegisterConverter(IConverter converter)
         {
             converters.Add(converter.Name, converter);
         }
+        /// <summary>
+        /// 注销转换器。
+        /// </summary>
+        /// <param name="name">转换器。</param>
         public void UnregisterConverter(string name)
         {
             converters.Remove(name);
@@ -22,7 +36,7 @@ namespace OurOpenSource.Data.EasyMark.Converter
         /// 执行转化。
         /// </summary>
         /// <param name="markedEasyMark">被转化的EasyMark。</param>
-        /// <returns></returns>
+        /// <returns>HTML。</returns>
         public abstract string Convert(MarkedEasyMark markedEasyMark);
 
         //#region ==DefaultConfigure==
