@@ -345,3 +345,4 @@ healthchecksdb
 CheckList.txt
 Test_Console/
 Test_WPF/
+UploadNugetPackage.ps1

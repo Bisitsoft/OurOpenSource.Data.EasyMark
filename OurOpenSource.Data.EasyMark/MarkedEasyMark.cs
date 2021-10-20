@@ -114,6 +114,7 @@ namespace OurOpenSource.Data.EasyMark
         /// <param name="marksPosition">各个标记的位置。</param>
         /// <param name="marksLength">各个标记的长度。</param>
         /// <param name="text">EasyMark文本。</param>
+        /// <param name="basePath">EasyMark所在目录。</param>
         public MarkedEasyMark(List<int> marksPosition, List<int> marksLength, string text, string basePath)
         {
             this.MarksPosition = marksPosition;

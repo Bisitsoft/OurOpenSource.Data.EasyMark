@@ -106,11 +106,12 @@
             <param name="path">文档路径。</param>
             <returns>标记过的EasyMark文档。</returns>
         </member>
-        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkLoader.ProcessEasyMark(System.String)">
+        <member name="M:OurOpenSource.Data.EasyMark.EasyMarkLoader.ProcessEasyMark(System.String,System.String)">
             <summary>
             处理EasyMark的原文本。
             </summary>
             <param name="originText">EasyMark的原文本。</param>
+            <param name="path">EasyMark所在目录</param>
             <returns>处理后的EasyMark。</returns>
             <remarks>
             通过寻找单数的连续的`'['`的尾部，来寻找一个标记的起始。
@@ -155,10 +156,11 @@
             方法`Demark()`的返回值类型。
             </summary>
         </member>
-        <member name="M:OurOpenSource.Data.EasyMark.IEasyMark.Demark(System.String)">
+        <member name="M:OurOpenSource.Data.EasyMark.IEasyMark.Demark(System.String,System.String)">
             <summary>
             解析标记。
             </summary>
+            <param name="basePath">EasyMark所在目录。</param>
             <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
             <returns>执行结果。如果没有则为`null`。</returns>
         </member>
@@ -169,6 +171,11 @@
             <remarks>
             因为只是用于存储，所以各个值之间不想关。
             </remarks>
+        </member>
+        <member name="P:OurOpenSource.Data.EasyMark.MarkedEasyMark.BasePath">
+            <summary>
+            EasyMark的绝对路径。
+            </summary>
         </member>
         <member name="P:OurOpenSource.Data.EasyMark.MarkedEasyMark.MarksPosition">
             <summary>
@@ -201,13 +208,14 @@
             </summary>
             <returns>转义后的EasyMark文档。</returns>
         </member>
-        <member name="M:OurOpenSource.Data.EasyMark.MarkedEasyMark.#ctor(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String)">
+        <member name="M:OurOpenSource.Data.EasyMark.MarkedEasyMark.#ctor(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String,System.String)">
             <summary>
             构造MarkedEasyMark。
             </summary>
             <param name="marksPosition">各个标记的位置。</param>
             <param name="marksLength">各个标记的长度。</param>
             <param name="text">EasyMark文本。</param>
+            <param name="basePath">EasyMark所在目录。</param>
         </member>
         <member name="T:OurOpenSource.Data.EasyMark.Marks.EasyMarksManager">
             <summary>
@@ -254,10 +262,11 @@
             方法`Demark()`的返回值类型。
             </summary>
         </member>
-        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_cmt.Demark(System.String)">
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_cmt.Demark(System.String,System.String)">
             <summary>
             解析标记。
             </summary>
+            <param name="basePath">EasyMark所在目录。</param>
             <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
             <returns>执行结果。如果没有则为`null`。</returns>
         </member>
@@ -276,10 +285,11 @@
             方法`Demark()`的返回值类型。
             </summary>
         </member>
-        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_img.Demark(System.String)">
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_img.Demark(System.String,System.String)">
             <summary>
             解析标记。
             </summary>
+            <param name="basePath">EasyMark所在目录。</param>
             <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
             <returns>执行结果。如果没有则为`null`。</returns>
         </member>
@@ -298,10 +308,11 @@
             方法`Demark()`的返回值类型。
             </summary>
         </member>
-        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_obj.Demark(System.String)">
+        <member name="M:OurOpenSource.Data.EasyMark.Marks.EM_obj.Demark(System.String,System.String)">
             <summary>
             解析标记。
             </summary>
+            <param name="basePath">EasyMark所在目录。</param>
             <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
             <returns>执行结果。如果没有则为`null`。</returns>
         </member>

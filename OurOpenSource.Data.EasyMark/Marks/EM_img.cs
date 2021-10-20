@@ -32,7 +32,7 @@ namespace OurOpenSource.Data.EasyMark.Marks
 		public object Demark(string basePath, string arg)
 		{
 			string path = arg;
-            if (Path.IsPathFullyQualified(path))
+			if (!Path.IsPathFullyQualified(path))
             {
 				path = Path.Combine(basePath, arg);
             }

@@ -16,7 +16,7 @@ Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .
 
 As usual, you should call OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization() once at begin.</PackageReleaseNotes>
     <PackageTags>easymark winforms</PackageTags>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
