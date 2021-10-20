@@ -22,9 +22,10 @@ namespace OurOpenSource.Data.EasyMark.Marks
 		/// <summary>
 		/// 解析标记。
 		/// </summary>
+		/// <param name="basePath">EasyMark所在目录。</param>
 		/// <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
 		/// <returns>执行结果。如果没有则为`null`。</returns>
-		public object Demark(string arg)
+		public object Demark(string basePath, string arg)
         {
 			return null;
         }

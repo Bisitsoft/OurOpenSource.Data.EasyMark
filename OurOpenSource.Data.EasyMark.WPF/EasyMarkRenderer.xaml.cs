@@ -81,11 +81,11 @@ namespace OurOpenSource.Data.EasyMark.WPF
                     case EasyMarkReturnType.Void:
                         break;
                     case EasyMarkReturnType.String:
-                        AutoReturn((string)easyMark.Demark(arg));
+                        AutoReturn((string)easyMark.Demark(markedEasyMark.BasePath, arg));
                         break;
                     case EasyMarkReturnType.Bitmap:
                         NewRun();
-                        System.Windows.Controls.Image image = ToImage((Bitmap)easyMark.Demark(arg));
+                        System.Windows.Controls.Image image = ToImage((Bitmap)easyMark.Demark(markedEasyMark.BasePath, arg));
                         lastP.Inlines.Add(image);
                         break;
                     default:

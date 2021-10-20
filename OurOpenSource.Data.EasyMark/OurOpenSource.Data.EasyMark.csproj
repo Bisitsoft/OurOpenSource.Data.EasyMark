@@ -5,7 +5,9 @@
     <RootNamespace>OurOpenSource.Data.EasyMark</RootNamespace>
     <AssemblyName>OurOpenSource.Data.EasyMark</AssemblyName>
     <PackageReleaseNotes>More info view: https://github.com/Orange23333/OurOpenSource.Data.EasyMark .
-Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</PackageReleaseNotes>
+Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .
+
+As usual, you should call OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization() once at begin.</PackageReleaseNotes>
     <Description>OurOpenSource.Data.EasyMark</Description>
     <PackageProjectUrl>https://github.com/Orange23333/OurOpenSource.Data.EasyMark</PackageProjectUrl>
     <Version>1.3.0.1</Version>

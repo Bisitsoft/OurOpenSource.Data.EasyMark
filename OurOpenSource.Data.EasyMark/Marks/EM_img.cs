@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Drawing;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Text;
 
 namespace OurOpenSource.Data.EasyMark.Marks
@@ -10,7 +11,7 @@ namespace OurOpenSource.Data.EasyMark.Marks
 	/// </summary>
     public class EM_img : IEasyMark
     {
-		private string src;
+		//private string src;
 
 		/// <summary>
 		/// 标记的类型的名称。
@@ -25,11 +26,17 @@ namespace OurOpenSource.Data.EasyMark.Marks
 		/// <summary>
 		/// 解析标记。
 		/// </summary>
+		/// <param name="basePath">EasyMark所在目录。</param>
 		/// <param name="arg">标记中的`arg`部分。如果不存在则为`""`。</param>
 		/// <returns>执行结果。如果没有则为`null`。</returns>
-		public object Demark(string arg)
+		public object Demark(string basePath, string arg)
 		{
-			return Bitmap.FromFile(arg);
+			string path = arg;
+            if (Path.IsPathFullyQualified(path))
+            {
+				path = Path.Combine(basePath, arg);
+            }
+			return Bitmap.FromFile(path);
 		}
 	}
 }

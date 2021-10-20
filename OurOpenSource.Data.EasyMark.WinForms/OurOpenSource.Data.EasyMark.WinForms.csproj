@@ -12,7 +12,9 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Orange23333/OurOpenSource.Data.EasyMark</PackageProjectUrl>
     <PackageReleaseNotes>More info view: https://github.com/Orange23333/OurOpenSource.Data.EasyMark .
-Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .</PackageReleaseNotes>
+Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .
+
+As usual, you should call OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization() once at begin.</PackageReleaseNotes>
     <PackageTags>easymark winforms</PackageTags>
     <Version>1.0.0.1</Version>
   </PropertyGroup>

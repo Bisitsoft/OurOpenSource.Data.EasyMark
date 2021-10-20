@@ -64,19 +64,20 @@ namespace OurOpenSource.Data.EasyMark
 		public static MarkedEasyMark LoadFromFile(string path)
 		{
 			//FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, FileOptions.SequentialScan);
-			return ProcessEasyMark(File.ReadAllText(path));
+			return ProcessEasyMark(File.ReadAllText(path), Path.GetDirectoryName(path));
 		}
 
 		/// <summary>
 		/// 处理EasyMark的原文本。
 		/// </summary>
 		/// <param name="originText">EasyMark的原文本。</param>
+		/// <param name="path">EasyMark所在目录</param>
 		/// <returns>处理后的EasyMark。</returns>
 		/// <remarks>
 		/// 通过寻找单数的连续的`'['`的尾部，来寻找一个标记的起始。
 		/// 会自动把文本中的`\r\n`替换为`\n`。
 		/// </remarks>
-		public static MarkedEasyMark ProcessEasyMark(string originText)
+		public static MarkedEasyMark ProcessEasyMark(string originText, string path)
         {
 			originText = originText.Replace("\r\n", "\n");
 
@@ -150,7 +151,7 @@ namespace OurOpenSource.Data.EasyMark
 			//	throw new FormatException("Left and right brackets do not match.");
             //}
 
-			return new MarkedEasyMark(marksPosition, marksLength, processedText.ToString());
+			return new MarkedEasyMark(marksPosition, marksLength, processedText.ToString(), path);
 		}
 	}
 }

@@ -13,6 +13,11 @@ namespace OurOpenSource.Data.EasyMark
     public class MarkedEasyMark
     {
         /// <summary>
+        /// EasyMark的绝对路径。
+        /// </summary>
+        public string BasePath { get; set; }
+
+        /// <summary>
         /// 各个标记的位置。
         /// </summary>
         public List<int> MarksPosition { get; set; }
@@ -109,11 +114,12 @@ namespace OurOpenSource.Data.EasyMark
         /// <param name="marksPosition">各个标记的位置。</param>
         /// <param name="marksLength">各个标记的长度。</param>
         /// <param name="text">EasyMark文本。</param>
-        public MarkedEasyMark(List<int> marksPosition, List<int> marksLength, string text)
+        public MarkedEasyMark(List<int> marksPosition, List<int> marksLength, string text, string basePath)
         {
             this.MarksPosition = marksPosition;
             this.MarksLength = marksLength;
             this.Text = text;
+            this.BasePath = basePath;
         }
     }
 }
