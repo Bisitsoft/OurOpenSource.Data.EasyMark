@@ -20,7 +20,16 @@ namespace OurOpenSource.Data.EasyMark
 		/// <summary>
 		/// 返回`System.Drawing.Bitmap`。
 		/// </summary>
-		Bitmap = 2
+		Bitmap = 2,
+
+		/// <summary>
+		/// 返回`object`。
+		/// </summary>
+		Object = 3,
+		/// <summary>
+		/// 返回`object`。
+		/// </summary>
+		Other = Object
 	}
 	
 	/// <summary>

@@ -138,6 +138,16 @@
             返回`System.Drawing.Bitmap`。
             </summary>
         </member>
+        <member name="F:OurOpenSource.Data.EasyMark.EasyMarkReturnType.Object">
+            <summary>
+            返回`object`。
+            </summary>
+        </member>
+        <member name="F:OurOpenSource.Data.EasyMark.EasyMarkReturnType.Other">
+            <summary>
+            返回`object`。
+            </summary>
+        </member>
         <member name="T:OurOpenSource.Data.EasyMark.IEasyMark">
             <summary>
             EasyMark。
