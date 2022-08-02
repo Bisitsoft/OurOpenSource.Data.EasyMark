@@ -8,15 +8,17 @@
     <Authors>Orange233</Authors>
     <Company>Bisitsoft Studio</Company>
     <Description>OurOpenSource.Data.EasyMark.WinForms</Description>
-    <Copyright>Copyright © Bisitsoft 2021</Copyright>
+    <Copyright>Copyright © Bisitsoft 2021-2022</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Orange23333/OurOpenSource.Data.EasyMark</PackageProjectUrl>
     <PackageReleaseNotes>More info view: https://github.com/Orange23333/OurOpenSource.Data.EasyMark .
 Official website: https://www.ourorangenet.com/wiki/index.php/OurOpenSource .
 
 As usual, you should call OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Initialization() once at begin.</PackageReleaseNotes>
-    <PackageTags>easymark winforms</PackageTags>
-    <Version>1.0.0.3</Version>
+    <PackageTags>easymark;winforms</PackageTags>
+    <Version>1.0.0.4</Version>
+    <RepositoryUrl>https://github.com/Bisitsoft/OurOpenSource.Data.EasyMark</RepositoryUrl>
+    <PackageIcon>EasyMark_20220802.inkscape.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -33,6 +35,10 @@ As usual, you should call OurOpenSource.Data.EasyMark.Marks.EasyMarksManager.Ini
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\images\EasyMark_20220802.inkscape.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
