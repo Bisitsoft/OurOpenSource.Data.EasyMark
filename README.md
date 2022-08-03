@@ -4,7 +4,7 @@ An easy mark format.
 
 [Link to OurOpenSource Main Git](https://github.com/Orange23333/OurOpenSource)
 
-跟名字一样是一个简易的标记方式，暂时不要指望有多太多的功能。
+跟名字一样是一个简易的标记语言，暂时不要指望有多太多的功能。
 
 暂时不输出格式错误位置。
 
@@ -108,3 +108,11 @@ easyMarkRenderer.Render(doc);
 ## 其他
 
 `NPP_UDL_EasyMark.xml`是用于Notepad++的用户自定义语言文件。
+
+# 构建情况
+
+|Build|NuGet|
+|:-:|:-:|
+|`OurOpenSource.Data.EasyMark`|[![](https://img.shields.io/nuget/v/OurOpenSource.Data.EasyMark.svg)](https://www.nuget.org/packages/OurOpenSource.Data.EasyMark)|
+|`OurOpenSource.Data.EasyMark.Winforms`|[![](https://img.shields.io/nuget/v/OurOpenSource.Data.EasyMark.Winforms.svg)](https://www.nuget.org/packages/OurOpenSource.Data.EasyMark.Winforms)|
+|`OurOpenSource.Data.EasyMark.WPF`|[![](https://img.shields.io/nuget/v/OurOpenSource.Data.EasyMark.WPF.svg)](https://www.nuget.org/packages/OurOpenSource.Data.EasyMark.WPF)|
